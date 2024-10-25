@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Page</title>
+    <style>
+        /* Định dạng cho toàn trang */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Thanh điều hướng */
+        nav {
+            background-color: while;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        /* Logo và tên trang */
+        .header {
+            display: flex;           /* Sử dụng flexbox để bố trí */           
+            align-items: center;     /* Căn giữa theo chiều dọc */
+            padding: 20px 20px;  
+        }
+        .header img {
+            width: 50px;
+            margin-right: 20px;
+        }
+        .header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        /* Bảng nội dung */       
+        .content-box {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 20px;
+           border: 1px solid #ddd;
+           margin: 20px;
+           border-radius: 8px;
+           background-color: #f9f9f9;
+           position: relative;
+           flex-direction: row;
+        }
+        .content-left {
+           flex: 1;
+           display: flex;
+           flex-direction: column; /* Đặt theo chiều dọc */
+           margin: 0; /* Bỏ margin mặc định */
+           padding-left: 20px;
+        }
+        .content-right {
+           flex: 2;
+           display: flex;
+           align-items: center;
+           padding: 20px;
+        }
+        .icon {
+           margin-right: 10px;
+        }
+        .icon-image {
+           width: 35px; /* Kích thước biểu tượng */
+        }
+        .text-content {
+           display: flex; 
+           flex-direction: column; /* Đặt theo chiều dọc */    
+        }
+        .content-center {
+           display: flex;
+           align-items: center;
+           font-size: 18px; 
+        }
+        .streak-info {
+           position: absolute; /* Đặt vị trí tuyệt đối cho streak-info */
+           display: flex;
+           align-items: center;
+           font-size: 18px;
+           right: 40%; /* Bắt đầu từ 50% chiều rộng của màn hình từ bên phải */
+           
+        }
+        .streak-icon {
+           width: 50px;
+           margin-right: 10px;
+        }
+        q {
+           margin: 10px 0; 
+           color: #666;
+        }
+        .progress-info{
+           position: absolute; /* Đặt vị trí tuyệt đối cho streak-info */
+           display: flex;
+           flex-direction: row; /* Đặt theo chiều dọc */ 
+           right:20%;      
+            .circle-chart {
+               width: 50px; /* Đặt chiều rộng của ảnh */
+               height: 50px; /* Đặt chiều cao của ảnh */              
+        }
+
+        }
+        
+        .activity-link {
+            position: absolute; /* Đặt liên kết ở vị trí tuyệt đối trong khung */
+            bottom: 10px;
+            right: 30px; /* Cách bên phải khung 30px */
+            color: blue; /* Màu xanh cho liên kết */
+            text-decoration: none; /* Loại bỏ gạch chân mặc định của liên kết */
+        }    
+        .activity-link:hover {
+            text-decoration: underline; /* Gạch chân khi hover vào link */
+        }
+        .courses {
+            display: flex;
+            gap: 20px;
+        }
+        h2 {
+      text-indent: 20px;  /* Thụt đầu dòng theo ý muốn, ví dụ 20px */
+    }
+        .course {
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+        }      
+        .scroll-container {      
+            padding: 10px;*/
+            width: 100vw;            /* Chiều rộng phần tử bằng với màn hình */
+            overflow-x: auto;        /* Thêm thanh cuộn ngang */
+            white-space: nowrap;     /* Không xuống dòng */
+            border: 1px solid #ccc;
+            padding: 10px;
+        }      
+    </style>  
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Business Operations</a></li>
+            <li><a href="#">Cloud Computing</a></li>
+            <li><a href="#">Cybersecurity</a></li>
+            <li><a href="#">Data Science</a></li>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">IT Operations</a></li>
+            <li><a href="#">Language Learning</a></li>
+            <li><a href="#">Leadership & Management</a></li>
+            <li><a href="#">Maketting</a></li>
+        </ul>
+    </nav>
+    <!-- Logo và tên trang -->
+    <div class="header">
+        <img src="img\logo.png" alt="Logo">
+        <h1>Welcome back, Dang Thi My Hanh</h1>
+    </div>
+    <!-- Bảng nội dung -->
+    <div class="content-box">
+        <div class="content-left">
+            <h2>Weekly streak</h2>
+            <p>One ring down, one to go. Keep it up!</p>
+        </div>
+        <div class="content-center">
+            <div class="streak-info">
+                <img class="streak-icon" src="img\lua.png" alt="Streak Icon">
+                <div class="text-content">
+                    <span>2 weeks</span>
+                    <q>Current streak</q>
+                </div>
+            </div>           
+            <div class="progress-info">
+                <img class="circle-chart" src="img\tron.png"  alt="Progress Chart">
+                <div class="text-content">
+                    <span>11/30 course min</span>
+                    <span>4/1 visit</span>
+                    <small>Oct 13 - 19</small>
+                </div>              
+            </div>
+            <div class="activity-link">
+                <a href="#">See all activity</a>
+            </div>
+        </div>
+    </div>
+    <h2>Pick up where you left off</h2>
+    <div class="courses">
+        <nav>
+            <ul>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Learning paths</a></li>
+                <li><a href="#">Certification</a></li>
+            </ul>
+        </nav>    
+    </div> 
+    <div class="scroll-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5J0ofZaRaxo?si=xOinrlN6Spp9ReVL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZHPa0xb9tPc?si=OSFFI26W-ySXeHN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/S4OoOVWPA94?si=XwMMUZRIIGp5Q09k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div> 
+</body>
+</html>

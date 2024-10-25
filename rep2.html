@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certification Interests</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+        .recommendations {
+            margin-bottom: 20px; /* Thêm khoảng cách dưới phần đề xuất */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
+        }
+        .h1{
+                
+            color: #333;
+            display: inline;
+            margin: 0;
+        }
+        .edit-link {
+            display: inline;/* Thiết lập kiểu inline */  
+            margin-left: 10px; /* Tạo khoảng cách nếu cần */
+            font-size: 16px; 
+            color: #0056b3;
+        }
+        .edit-link:hover {
+            text-decoration: underline;
+        }
+        .h2 {
+            text-align: left;
+            color: #333;
+            text-align: center;
+            flex-direction: row;
+        }
+        
+        .carousel {
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 22%;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #666;
+        }
+        .personalize {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            line-height: 2;
+        }
+        .personalize button {
+            background-color: #333;
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 2;
+        }
+        .personalize button:hover {
+            
+            background-color: #1c1b1a;
+        }
+        .image-container {
+           display: flex;            /* Sử dụng Flexbox để căn giữa */
+           justify-content: center;   /* Căn giữa theo chiều ngang */
+        }
+        .image-container img {
+           width: 45px;              /* Đặt chiều rộng mong muốn */
+           height: auto;              /* Chiều cao tự động giữ tỷ lệ */
+        }
+    </style>
+</head>
+<body>
+    <section class="recommendations">
+        <h1>Based on your certification interests, we recommend</h1>
+        <span><a href="#" class="edit-link">Edit certification interests</a></span>
+        <div class="carousel">
+            <div class="card">
+                <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://blogger.googleusercontent.com/img/a/AVvXsEi_mf8fie7HnXAlH9VG85ztLOHg6_3wCeHrOAg2yFAS6sRATHy6CUhc-kqCLs2MLnTDCgOW81FyQsqPAwQFd5ZwHi9gLGsGI0k5SjKpot60MxUwWQdcGGwW80Ox3oXOMrA_L4kvM3ZarFUyR5RISkMm4rzhE0hYSeURI2aWKvGxmDGOl5WAUPc2NlnVsO8=w449-h253">
+                <h2>Oracle Certified Associate Java Programmer (OCAJP) 1Z0-808</h2>
+                <p>Andrii Piatakha, Learn IT University</p>
+                <p><strong>4.6</strong> ⭐ (438)</p>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQhucLs5kbq51RfPPiJCrtTR2krEjEG3_cqqPOCqu3VNCfgmqAu" class="wETe9b jFVN1" aria-hidden="true" data-iml="7171.599999904633">
+                <h2>Oracle Java Certification - Pass the Associate 1Z0-808 Exam</h2>
+                <p>Tim Buchalka's Learn Programming Academy</p>
+                <p><strong>4.6</strong> ⭐ (5,906)</p>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPsZl6HO2VtmVHUnR1FXGUyZPtxy9r1nxR7_gtVrTj10qo5CvU" class="wETe9b jFVN1" aria-hidden="true" data-iml="6056.799999952316">
+                <h2>Complete Java SE 8 Developer Bootcamp - OCA Prep Included</h2>
+                <p>Intertech Training, Jeff Jensen</p>
+                <p><strong>4.6</strong> ⭐ (9,726)</p>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRInko3fetxDIPxa4qqOp3S6gpRiZ5TvTHqHL8NAf1yeX-pe70x" class="wETe9b jFVN1" aria-hidden="true" data-iml="6044.399999856949">
+                <h2>Spring Professional Certification Exam Tutorial - Module 02</h2>
+                <p>Dominik Cebula</p>
+                <p><strong>4.6</strong> ⭐ (1,121)</p>
+            </div>
+        </div>
+    </section>   
+    <section class="personalize">
+        <div class="image-container"> <img src="img\user.png" alt="Logo"></div>    
+        <h2>Personalize your learning experience</h2>
+        <p>Add your occupation and interests to get better content recommendations.</p>
+        <button>Add occupation and interests</button>
+    </section>
+
+</body>
+</html>
